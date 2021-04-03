@@ -6,19 +6,19 @@ import java.util.Scanner;
 
 public class FizzBuzz {
     private static List<String> fizzBuzz(int num) {
-        ArrayList<String> strArray = new ArrayList<>();
-        for(int i = 1; i < num + 1; i++) {
+        ArrayList<String> stringArrayList = new ArrayList<>();
+        for(int i = 1 ; i <= num; i++) {
             if(i % 15 == 0) {
-                strArray.add("FizzBuzz");
-            } else if (i % 3 == 0) {
-                strArray.add("Fizz");
+                stringArrayList.add("FizzBuzz");
+            } else if(i % 3 == 0) {
+                stringArrayList.add("Fizz");
             } else if(i % 5 == 0) {
-                strArray.add("Buzz");
+                stringArrayList.add("Buzz");
             } else {
-                strArray.add(String.valueOf(i));
+                stringArrayList.add(String.valueOf(i));
             }
         }
-        return strArray;
+        return stringArrayList;
     }
     public static void main(String[] args) {
         System.out.println("Type your number");

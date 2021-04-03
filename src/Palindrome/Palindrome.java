@@ -1,21 +1,20 @@
 package Palindrome;
 
 public class Palindrome {
-    private static boolean isPalindrome(int n) {
-        // n = 101
-        if(n < 0 || (n % 10 == 0 && n != 0)) return false;
-        int reversedNum = 0; //123
-        while(n > reversedNum) {
-            int pop = n % 10;
-            // pop = 1
-            reversedNum = reversedNum * 10 + pop; // reversedNum = 1
-            // n = 10
-            n = n / 10;
+    public static Boolean isPalindrome(String input) {
+        if(input == null || input.length() == 0) return false;
+        StringBuilder sb = new StringBuilder();
+        for(int i = input.length() - 1; i >= 0; i--) {
+            sb.append(input.charAt(i));
         }
-        return n == reversedNum || n == reversedNum / 10;
+        if(input.equals(sb.toString())) return true;
+
+        return false;
     }
 
     public static void main(String[] args) {
-        System.out.println(Palindrome.isPalindrome(101));
+        System.out.println(Palindrome.isPalindrome("I2 did did I"));
+
+
     }
 }
